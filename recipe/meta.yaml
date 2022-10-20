@@ -16,21 +16,22 @@ build:
 
 requirements:
   build:
-    - cython
+    - cython >=0.24.0
 #    - python                                 # [build_platform != target_platform]
 #    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
 #    - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - cython
+    - cython >=0.24.0
     - numpy
     - pip
     - python
   run:
     - cython >=0.24.0
     - python
-    - {{ pin_compatible('numpy') }}
+#    - {{ pin_compatible('numpy') }}
+    - numpy
 
 test:
   imports:
