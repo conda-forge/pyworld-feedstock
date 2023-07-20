@@ -1,5 +1,5 @@
 {% set name = "pyworld" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyworld-{{ version }}.tar.gz
-  sha256: a3a81755983dfa2299a9e2947752582ddcc84a5c277b04f4595ce4406372d1e5
+  sha256: 106c70ee7a7d8c9ba488d8022f2033706929a40f0264256b8e87da5aab98303a
 
 build:
   number: 0
