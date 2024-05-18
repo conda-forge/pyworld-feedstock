@@ -11,7 +11,7 @@ source:
   sha256: 106c70ee7a7d8c9ba488d8022f2033706929a40f0264256b8e87da5aab98303a
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,6 +20,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
     - numpy
     - pip
@@ -27,7 +28,6 @@ requirements:
   run:
     - cython >=0.24.0
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
