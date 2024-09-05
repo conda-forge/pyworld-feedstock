@@ -20,11 +20,12 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('cxx') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
   host:
     - numpy
     - pip
     - python
+    - setuptools
   run:
     - cython >=0.24.0
     - python
