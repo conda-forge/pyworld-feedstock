@@ -22,6 +22,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
   host:
+    - cython >=0.24.0
     - numpy
     - pip
     - python
