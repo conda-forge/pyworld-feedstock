@@ -11,7 +11,7 @@ source:
   sha256: 1b93e53cddb67a0e4faa34d6cf919ac6c662feb1c8c0ed901d71b595ab396aa3
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -30,7 +30,6 @@ requirements:
   run:
     - cython >=0.24.0
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
