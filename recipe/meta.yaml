@@ -30,6 +30,7 @@ requirements:
   run:
     - cython >=0.24.0
     - python
+    - setuptools
 
 test:
   imports:
