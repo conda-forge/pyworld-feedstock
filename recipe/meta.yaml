@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyworld-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/pyworld-{{ version }}.tar.gz
   sha256: 1b93e53cddb67a0e4faa34d6cf919ac6c662feb1c8c0ed901d71b595ab396aa3
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -26,11 +26,11 @@ requirements:
     - numpy
     - pip
     - python
-    - setuptools
+    - setuptools <82
   run:
     - cython >=0.24.0
     - python
-    - setuptools
+    - setuptools <82
 
 test:
   imports:
