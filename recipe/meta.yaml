@@ -26,11 +26,11 @@ requirements:
     - numpy
     - pip
     - python
-    - setuptools
+    - setuptools <82
   run:
     - cython >=0.24.0
     - python
-    - setuptools
+    - setuptools <82
 
 test:
   imports:
